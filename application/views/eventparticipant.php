@@ -20,7 +20,7 @@
                           foreach ($participants as $participant) {
                             ?>
                         <tr>
-                          <td><?php echo $participant['FullName']; ?></td>
+                          <td><?php echo $participant['firstName'].' '.$participant['lastName']; ?></td>
                           <td><?php echo $participant['email']; ?></td>
                           <td><?php echo $participant['phone1']; ?></td>
                           <td><?php if($participant['minEventId']==$id) echo 'Y'; else echo "N"; ?></td>
