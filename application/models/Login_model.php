@@ -8,7 +8,6 @@ class Login_model extends Ext_Model{
 	
 	function login($username, $password) {
 		$sql = "select * from msUser where userName = '".esc($username)."' and password = '".esc($password)."' and deleted <> 1";
-		echo $sql;
 		return $this->fetch_single_row($sql);
 	}
 	function checkCookieForLogin($username, $userid) {

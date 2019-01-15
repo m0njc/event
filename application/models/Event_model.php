@@ -32,7 +32,7 @@ class Event_model extends Ext_Model{
 
 	function getParticipantFromEvent($id)
 	{
-		$sql = "select p.*,min(e2.eventId) as minEventId from trEventParticipant e1 join trEventParticipant e2 on e1.peopleId=e2.peopleId join msPeople p on e1.peopleId=p.peopleId where e1.eventId=$id group by e1.peopleId";
+		$sql = "select p.*,max(e2.eventId) as maxEventId from trEventParticipant e1 join trEventParticipant e2 on e1.peopleId=e2.peopleId join msPeople p on e1.peopleId=p.peopleId where e1.eventId=$id group by e1.peopleId";
 		return $this->fetch_multi_row($sql);
 	}
 

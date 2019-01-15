@@ -553,3 +553,11 @@ iframe {
 .fb-logout {
   right: 100px;
 }
+
+.hide-other-parish {
+  display: none;
+}
+
+.show-other-parish {
+  display: inherit;
+}
